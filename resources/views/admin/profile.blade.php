@@ -10,7 +10,7 @@
 <div class="flex min-h-screen">
     @include('admin.sidebar')
 
-    <div class="flex-1 bg-gray-100">
+    <div class="flex-1 bg-gray-100 ml-64">
         <header class="bg-white shadow px-6 py-4">
             <h1 class="text-2xl font-semibold text-gray-700">Profile</h1>
         </header>
