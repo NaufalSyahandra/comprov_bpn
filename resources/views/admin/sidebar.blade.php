@@ -8,7 +8,7 @@
     <!-- Navigation Links -->
     <nav>
         <a href="{{ route('dashboard') }}" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Dashboard</a>
-        <a href="#" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Profile</a>
+        <a href="{{ route('profile') }}" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Profile</a>
         <a href="{{ route('cekberkas') }}" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Cek Berkas</a>
         <a href="{{ route('pengaduan') }}" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Pengaduan</a>
     </nav>
