@@ -1,4 +1,4 @@
-<aside class="bg-[#1E3A56] text-white w-64 space-y-6 py-7 px-4">
+<aside class="bg-[#1E3A56] text-white w-64 space-y-6 py-7 px-4 fixed h-full">
     <!-- Logo & Title -->
     <div class="flex items-center space-x-2 px-4">
         <img src="../images/logobpn.png" alt="Logo Bpn" class="w-12 h-12 rounded-full">
@@ -33,5 +33,4 @@
             </button>
         </form>
     </div>
-
 </aside>

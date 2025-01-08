@@ -19,6 +19,7 @@ Route::get('/publikasi', [LandingPageController::class, 'publikasi'])->name('pub
 Route::get('/layanan', [LandingPageController::class, 'layanan'])->name('layanan');
 Route::get('/layanan/cekberkas', [LandingPageController::class, 'layanan_cekberkas'])->name('layanan.cekberkas');
 Route::get('/layanan/pengaduan', [LandingPageController::class, 'layanan_pengaduan'])->name('layanan.pengaduan');
+Route::post('/layanan/pengaduan', [LandingPageController::class, 'layanan_pengaduan_store'])->name('layanan.kirim.pengaduan');
 
 // Halaman Login
 Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('login.form')->middleware('guest');
@@ -33,6 +34,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan');
+    Route::post('/admin/pengaduan/update/{id}', [PengaduanController::class, 'update'])->name('pengaduan.update');
     Route::get('/admin/cekberkas', [CekBerkasController::class, 'index'])->name('cekberkas');
     Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile');
     Route::put('/admin/profile', [ProfileController::class, 'update'])->name('profile.update');

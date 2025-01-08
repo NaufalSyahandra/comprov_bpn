@@ -68,7 +68,7 @@
 
         <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
             <div class="bg-white p-6 rounded-lg shadow-md w-96">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">Edit Profile</h2>
+                <h2 class="text-xl font-semi-bold text-gray-700 mb-4">Edit Profile</h2>
                 <form action="{{ route('profile.update') }}" method="POST">
                     @csrf
                     @method('PUT')
