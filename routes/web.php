@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CekBerkasController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PengaduanController;
@@ -31,4 +32,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan');
+    Route::get('/admin/cekberkas', [CekBerkasController::class, 'index'])->name('cekberkas');
 });
