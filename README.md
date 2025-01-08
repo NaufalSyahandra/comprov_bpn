@@ -7,60 +7,158 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Admin Panel for Kantor Pertanahan Kabupaten Gresik
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup Instructions](#setup-instructions)
+5. [Usage](#usage)
+6. [Application Flow](#application-flow)
+7. [File Structure](#file-structure)
+8. [Screenshots](#screenshots)
+9. [Lisence](#lisence)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Overview
+Admin Panel for managing the web application of Kantor Pertanahan Kabupaten Gresik. This platform simplifies administrative tasks with intuitive navigation and efficient workflows.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
+- **Authentication**: Admin login/logout with session management.
+- **Default Laravel Auth**: Pre-built authentication system for both admin and users, including registration, login, and password reset.
+- **Dashboard**: Displays key metrics and performance indicators.
+- **Complaint Management (Pengaduan)**: View and manage user-submitted complaints.
+- **User Default Page**: Users can check the status of their documents and file complaints.
+- **Content Navigation**: Access management sections such as Profile, Cek Berkas, and more.
+- **Responsive Design**: Fully functional across devices.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies Used
+- **Frontend**: HTML, CSS, TailwindCSS
+- **Backend**: Laravel 10
+- **Database**: MySQL
+- **Authentication**: Laravel Sanctum & Default Laravel Auth
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Setup Instructions
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-repo/admin-panel.git
+   ```
 
-### Premium Partners
+2. **Navigate to Project Directory**:
+   ```bash
+   cd admin-panel
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+3. **Install Dependencies**:
+   ```bash
+   composer install
+   npm install
+   ```
 
-## Contributing
+4. **Configure Environment**:
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update database and other configurations in the `.env` file.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. **Generate Application Key**:
+   ```bash
+   php artisan key:generate
+   ```
 
-## Code of Conduct
+6. **Run Migrations**:
+   ```bash
+   php artisan migrate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. **Start the Development Server**:
+   ```bash
+   php artisan serve
+   ```
+   The application will be available at `http://127.0.0.1:8000`.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Usage
+1. Navigate to the Admin Login Page:
+   ```
+   http://127.0.0.1:8000/admin/login
+   ```
+2. Enter your admin credentials to log in.
+3. Use the sidebar for navigation between sections such as Dashboard, Pengaduan, and Profile.
+4. To logout, click the "Logout" button in the sidebar.
+
+---
+
+## Application Flow
+1. **Homepage**:
+   - Users are greeted with a welcome message, banner, and main navigation (Beranda, Tentang Kami, Publikasi, Layanan).
+   - Users can log in and access the "Cek Berkas" in "Layanan" section to check the status of their submitted documents.
+   - Users can also file and track complaints through the "Pengaduan" section.
+   - The "Login" button is located in the top-right corner, allowing admin access.
+
+2. **Login Page**:
+   - Admin enters their username/email and password to authenticate.
+   - Upon successful login, the admin is redirected to the dashboard.
+
+3. **Dashboard**:
+   - Admin can view key metrics and manage various sections such as Pengaduan and Profile.
+   - Includes options to log out securely.
+
+---
+
+## File Structure
+```
+admin-panel/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── views/
+│   │   ├── admin/
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── login.blade.php
+│   │   │   ├── pengaduan.blade.php
+│   │   ├── layanan/
+│   │   │   ├── cekberkas.blade.php
+│   │   │   ├── layanan.blade.php
+│   │   │   ├── pengaduan.blade.php
+│   │   ├── beranda.blade.php
+│   │   ├── publikasi.blade.php
+│   │   ├── tentang.blade.php
+├── routes/
+│   ├── api.php
+│   ├── web.php
+├── .env
+├── composer.json
+├── package.json
+```
+
+---
+
+## Screenshots
+### 1. Homepage
+![Homepage](#)
+
+### 2. Login Page
+![Login Page](#)
+
+### 3. Dashboard
+![Dashboard](#)
+
+---
 
 ## License
+This project is licensed under the [MIT License](LICENSE).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
