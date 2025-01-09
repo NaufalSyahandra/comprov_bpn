@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengaduan;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -11,6 +12,10 @@ class DashboardController extends Controller
 {
     public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('admin.dashboard');
+        $totalPengaduan = Pengaduan::count();
+
+        $notifikasiPengaduan = Pengaduan::latest()->take(5)->get();
+
+        return view('admin.dashboard', compact('totalPengaduan', 'notifikasiPengaduan'));
     }
 }
