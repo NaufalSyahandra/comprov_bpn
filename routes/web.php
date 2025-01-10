@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CekBerkasController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\ProfileController;
@@ -41,4 +42,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/cek-berkas/update-status/{id}', [CekBerkasController::class, 'updateStatus'])->name('cekberkas.updateStatus');
     Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile');
     Route::put('/admin/profile', [ProfileController::class, 'update'])->name('profile.update');
+});
+
+Route::middleware(['auth', 'can:superadmin'])->group(function () {
+    Route::get('/admin/data-user', [DataUserController::class, 'index'])->name('user.index');
+    Route::post('/admin/data-user', [DataUserController::class, 'store'])->name('user.store');
+    Route::get('/admin/data-user/{id}/edit', [DataUserController::class, 'edit'])->name('user.edit');
+    Route::put('/admin/data-user/{id}', [DataUserController::class, 'update'])->name('user.update');
+    Route::delete('/admin/data-user/{id}', [DataUserController::class, 'destroy'])->name('user.destroy');
 });
