@@ -35,7 +35,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan');
     Route::post('/admin/pengaduan/update/{id}', [PengaduanController::class, 'update'])->name('pengaduan.update');
-    Route::get('/admin/cekberkas', [CekBerkasController::class, 'index'])->name('cekberkas');
+    Route::get('/admin/cek-berkas', [CekBerkasController::class, 'index'])->name('cekberkas');
+    Route::post('/admin/cek-berkas', [CekBerkasController::class, 'store'])->name('cekberkas.store');
+    Route::get('/admin/cek-berkas/download/{id}', [CekBerkasController::class, 'download'])->name('cekberkas.download');
+    Route::post('/admin/cek-berkas/update-status/{id}', [CekBerkasController::class, 'updateStatus'])->name('cekberkas.updateStatus');
     Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile');
     Route::put('/admin/profile', [ProfileController::class, 'update'])->name('profile.update');
 });
