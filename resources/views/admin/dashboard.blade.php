@@ -26,10 +26,9 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Status', 'Jumlah'],
-                ['Berkas Selesai', 30],
-                ['Berkas Pending', 15],
-                ['Pengaduan Selesai', 20],
-                ['Pengaduan Pending', 25]
+                ['Berkas Selesai', {{ $totalBerkasSelesai }}],
+                ['Berkas Pending', {{ $totalBerkasPending }}],
+                ['Pengaduan', {{ $totalPengaduan }}],
             ]);
 
             var options = {
@@ -117,19 +116,19 @@
                 <!-- Card Total Berkas -->
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-lg font-semibold text-gray-700">Total Berkas</h2>
-                    <p class="text-3xl font-bold text-blue-600">120</p>
+                    <p class="text-3xl font-bold text-blue-600">{{ $totalBerkas }}</p>
                 </div>
 
                 <!-- Card Berkas Selesai -->
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-lg font-semibold text-gray-700">Berkas Selesai</h2>
-                    <p class="text-3xl font-bold text-green-600">30</p>
+                    <p class="text-3xl font-bold text-green-600">{{ $totalBerkasSelesai }}</p>
                 </div>
 
                 <!-- Card Berkas Pending -->
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-lg font-semibold text-gray-700">Berkas Pending</h2>
-                    <p class="text-3xl font-bold text-red-600">15</p>
+                    <p class="text-3xl font-bold text-red-600">{{ $totalBerkasPending }}</p>
                 </div>
             </div>
 

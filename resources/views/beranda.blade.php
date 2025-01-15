@@ -25,7 +25,8 @@
         <a href="{{ route('publikasi') }}" class="hover:text-gray-600 font-bold">Publikasi</a>
         <a href="{{ route('layanan') }}" class="hover:text-gray-600 font-bold">Layanan</a>
         <!-- Button Login -->
-        <a href="{{ route('login') }}" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Login</a>
+        <a href="{{ route('login') }}" target="_blank"
+           class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Login</a>
     </div>
 </nav>
 
@@ -95,90 +96,91 @@
 </section>
 
 <!-- News Section -->
-<section class="py-8 px-4 md:px-16 bg-sky-900 background-color: rgb(12 74 110);">
-    <h2 class="text-center text-xl font-semibold mb-6">Berita Terkini</h2>
+<section class="py-8 px-4 md:px-16 bg-sky-900">
+    <h2 class="text-center text-xl font-semibold mb-6 text-white">Berita Terkini</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <!-- Berita 1 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/Infografis-ATR-BPN-1.jpg" alt="Berita 1"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Penyampaian pesan pada Mentri ATRBPN</p>
+                <p class="text-gray-600 flex-grow">Penyampaian pesan pada Mentri ATRBPN</p>
             </div>
         </a>
         <!-- Berita 2 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news1.jpg" alt="Berita 2"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Selamat Atas Dilantiknya Ketua dan Wakil Kementrian ATRBPN 2024</p>
+                <p class="text-gray-600 flex-grow">Selamat Atas Dilantiknya Ketua dan Wakil Kementrian ATRBPN 2024</p>
             </div>
         </a>
         <!-- Berita 3 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news2.jpeg" alt="Berita 3"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Pertemuan antara mentri bpn barau dan mentri bpn lama</p>
+                <p class="text-gray-600 flex-grow">Pertemuan antara mentri bpn barau dan mentri bpn lama</p>
             </div>
         </a>
         <!-- Berita 4 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news3.jpg" alt="Berita 4"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Rapat koordinasi mentri bpn kepada kakanwil di Jawa Barat</p>
+                <p class="text-gray-600 flex-grow">Rapat koordinasi mentri bpn kepada kakanwil di Jawa Barat</p>
             </div>
         </a>
         <!-- Berita 5 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news5.jpeg" alt="Berita 5"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Wanti-wanti Oknum BPN Jadi Mafia Tanah, Nusron: Saya yang Antar ke Penegak
-                    Hukum</p>
+                <p class="text-gray-600 flex-grow">Wanti-wanti Oknum BPN Jadi Mafia Tanah, Nusron: Saya yang Antar ke
+                    Penegak Hukum</p>
             </div>
         </a>
         <!-- Berita 6 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news6.jpeg" alt="Berita 6"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Perluas Kerja Sama, Kementerian ATR/BPN Gandeng Kementerian Pertahanan dan BIN
-                    dalam Upaya Pencegahan dan Penuntasan Tindak Pidana Pertanahan</p>
+                <p class="text-gray-600 flex-grow">Perluas Kerja Sama, Kementerian ATR/BPN Gandeng Kementerian
+                    Pertahanan dan BIN</p>
             </div>
         </a>
         <!-- Berita 7 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news7.jpeg" alt="Berita 7"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">Beri Efek Jera, Tersangka Tindak Pidana Pertanahan di Bandung Dimiskinkan Baca
-                    artikel detiknews</p>
+                <p class="text-gray-600 flex-grow">Beri Efek Jera, Tersangka Tindak Pidana Pertanahan di Bandung
+                    Dimiskinkan Baca artikel detiknews</p>
             </div>
         </a>
         <!-- Berita 8 -->
         <a href="#"
-           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+           class="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="images/news8.jpeg" alt="Berita 8"
                  class="w-full h-40 object-cover group-hover:opacity-80 transition duration-300">
-            <div class="p-4">
+            <div class="p-4 flex flex-col h-full">
                 <h3 class="text-lg font-semibold">Kementerian ATRBPN</h3>
-                <p class="text-gray-600">15 Personel Ditkrimsus Polda Jabar Dapat Pin Emas dari Menteri ATR/BPN</p>
+                <p class="text-gray-600 flex-grow">15 Personel Ditkrimsus Polda Jabar Dapat Pin Emas dari Menteri
+                    ATR/BPN</p>
             </div>
         </a>
     </div>
