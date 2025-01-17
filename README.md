@@ -56,12 +56,12 @@ Admin Panel for managing the web application of Kantor Pertanahan Kabupaten Gres
 ## Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/admin-panel.git
+   git clone https://github.com/NaufalSyahandra/comprov_bpn.git
    ```
 
 2. **Navigate to Project Directory**:
    ```bash
-   cd admin-panel
+   cd comprov_bpn
    ```
 
 3. **Install Dependencies**:
@@ -74,6 +74,9 @@ Admin Panel for managing the web application of Kantor Pertanahan Kabupaten Gres
    - Copy `.env.example` to `.env`:
      ```bash
      cp .env.example .env
+     ```
+     ```bash
+        APP_NAME=komprof
      ```
    - Update database and other configurations in the `.env` file.
 
@@ -93,6 +96,10 @@ Admin Panel for managing the web application of Kantor Pertanahan Kabupaten Gres
    ```
    The application will be available at `http://127.0.0.1:8000`.
 
+8. **Seeder**:
+   ```bash
+    php artisan db:seed --class=UserSeeder
+    ```
 ---
 
 ## Usage
@@ -156,11 +163,11 @@ admin-panel/
 
 ## Screenshots
 ### 1. Homepage
-![Homepage](#)
+![Homepage](img.png)
 
 ### 2. Login Page
-![Login Page](#)
+![Login Page](img_1.png)
 
 ### 3. Dashboard
-![Dashboard](#)
+![Dashboard](img_2.png)
 
