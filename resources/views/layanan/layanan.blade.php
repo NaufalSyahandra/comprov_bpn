@@ -145,12 +145,12 @@
         <!-- Link Section -->
         <div class="flex flex-col gap-2 mt-4">
             <!-- Link 1: Layanan Cek Berkas -->
-            {{--            <a--}}
-            {{--                href="{{ url('/layanan/cekberkas') }}"--}}
-            {{--                class="text-gray-600 hover:text-blue-800 font-medium transition duration-300"--}}
-            {{--            >--}}
-            {{--                Layanan Cek Berkas--}}
-            {{--            </a>--}}
+            <a
+                href="{{ url('/layanan/cekberkas') }}"
+                class="text-gray-600 hover:text-blue-800 font-medium transition duration-300"
+            >
+                Layanan Cek Berkas
+            </a>
 
             <!-- Link 2: Layanan Pengaduan -->
             <a

@@ -17,6 +17,7 @@ class Berkas extends Model
         'nomor_berkas',
         'status',
         'file_path',
+        'created_at',
     ];
 
     public $timestamps = true;

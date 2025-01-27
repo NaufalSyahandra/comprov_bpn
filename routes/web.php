@@ -21,6 +21,9 @@ Route::get('/layanan', [LandingPageController::class, 'layanan'])->name('layanan
 Route::get('/layanan/cekberkas', [LandingPageController::class, 'layanan_cekberkas'])->name('layanan.cekberkas');
 Route::get('/layanan/pengaduan', [LandingPageController::class, 'layanan_pengaduan'])->name('layanan.pengaduan');
 Route::post('/layanan/pengaduan', [LandingPageController::class, 'layanan_pengaduan_store'])->name('layanan.kirim.pengaduan');
+//Route::get('/layanan/cari-berkas', [LandingPageController::class, 'layanan_cari_berkas'])->name('layanan.cari-berkas');
+Route::post('/layanan/cari-berkas', [LandingPageController::class, 'layanan_cari_berkas_store'])->name('layanan.cari-berkas.submit');
+Route::get('/berkas/download/{id}', [LandingPageController::class, 'downloadBerkas'])->name('berkas.download');
 
 // Halaman Login
 Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('login.form')->middleware('guest');

@@ -44,7 +44,6 @@
                             <th class="border border-gray-200 px-4 py-2">Kategori</th>
                             <th class="border border-gray-200 px-4 py-2">Pesan</th>
                             <th class="border border-gray-200 px-4 py-2">Status</th>
-                            <th class="border border-gray-200 px-4 py-2">Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -71,7 +70,6 @@
                                         </select>
                                     </form>
                                 </td>
-                                <td class="border border-gray-200 px-4 py-2"></td>
                             </tr>
                         @endforeach
                         </tbody>

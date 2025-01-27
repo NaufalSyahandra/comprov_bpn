@@ -97,7 +97,7 @@
                                         </select>
                                     </form>
                                 </td>
-                                <td class="p-3">{{ $item->created_at->format('d-m-Y H:i:s') }}</td>
+                                <td class="p-3">{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</td>
                                 <td class="p-3">
                                     <a href="{{ route('cekberkas.download', $item->id) }}"
                                        class="text-blue-600 hover:underline">Download</a>
@@ -129,7 +129,7 @@
                                 <td class="p-3">{{ $item->nama }}</td>
                                 <td class="p-3">{{ $item->jenis_berkas }}</td>
                                 <td class="p-3">{{ $item->nomor_berkas }}</td>
-                                <td class="p-3">{{ $item->created_at->format('d-m-Y H:i:s') }}</td>
+                                <td class="p-3">{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</td>
                                 <td class="p-3">
                                     <a href="{{ route('cekberkas.download', $item->id) }}"
                                        class="text-blue-600 hover:underline">Download</a>
@@ -161,7 +161,7 @@
                                 <td class="p-3">{{ $item->nama }}</td>
                                 <td class="p-3">{{ $item->jenis_berkas }}</td>
                                 <td class="p-3">{{ $item->nomor_berkas }}</td>
-                                <td class="p-3">{{ $item->created_at->format('d-m-Y H:i:s') }}</td>
+                                <td class="p-3">{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</td>
                                 <td class="p-3">
                                     <a href="{{ route('cekberkas.download', $item->id) }}"
                                        class="text-blue-600 hover:underline">Download</a>
