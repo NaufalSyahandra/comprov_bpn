@@ -76,7 +76,7 @@ Admin Panel for managing the web application of Kantor Pertanahan Kabupaten Gres
      cp .env.example .env
      ```
      ```bash
-        APP_NAME=komprof
+        DB_DATABASE=komprof
      ```
    - Update database and other configurations in the `.env` file.
 
