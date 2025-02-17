@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama_pengaduan');
             $table->string('email');
             $table->string('no_hp');
-            $table->enum('kategori', ['Kategori Pelayanan', 'Penata Muda Tk 1', 'Penata', 'Pembina']);
+            $table->enum('kategori', \Illuminate\Support\Arr::map(\App\Enums\KategoriPengaduan::cases(), fn($enum) => $enum->value));
             $table->text('pesan');
             $table->timestamps();
         });
