@@ -90,7 +90,8 @@
                 <div class="mb-4">
                     <label for="kategori" class="block text-gray-700">Kategori</label>
                     <select id="kategori" name="kategori" required class="border-gray-300 border rounded-md p-2 w-full">
-                        @foreach (App\Enums\KategoriPengaduan::cases() as $kategori)
+                        <option value="" disabled selected>Pilih Tahun</option>
+                    @foreach (App\Enums\KategoriPengaduan::cases() as $kategori)
                             <option value="{{ $kategori->value }}">{{ $kategori->name }}</option>
                         @endforeach
                     </select>
